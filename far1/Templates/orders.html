@@ -1,0 +1,27 @@
+<html>
+<title>
+
+</title>
+<body>
+	<h1>Order Options</h1>
+
+	<table border="2">
+		<tr>
+			<th>Username</th>
+			<th>MinCost</th>
+			<th>Quantity</th>
+			<th>Crop Image</th>
+		</tr>
+	{%for f in content%}
+		<tr>
+	<td>{{f.Username}}</td>
+		<td>{{f.MinCost}}</td>
+		<td>{{f.Quantity}}</td>
+			<td><img src="/far1/media/{{f.Quality}}" style="width: 30%; float: left; margin-right: 10px;"/></td>
+			</tr>
+	{% endfor %}
+	</table>
+	<br>
+	<a href="confirm">Place Order</a>
+</body>
+</html>

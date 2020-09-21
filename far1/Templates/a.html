@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>Crop Images</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+      </script>
+</head>
+<body>
+<h2>Successfully Logged In</h2>
+<h2>Hi,  {{content}}</h2>
+<table align="left" border="2" width="100%">
+    <tr>
+        <th>Crop Name</th>
+        <th>Crop Type</th>
+        <th>Quantity(in Quintals)</th>
+        <th>Crop_Image</th>
+    </tr>
+{% for crop in crop_images %}
+    <!--<img src="/far1{{crop.Quality.url }}"  style="width: 100%; float: left; margin-right: 10px;" />-->
+    <tr>
+            <div class="col-md-4">
+                <td>{{ crop.CropName }}</td>
+                <td>{{crop.CropType}}</td>
+                <td>{{crop.Quantity}}</td>
+                <td><img src="/far1{{crop.Quality.url }}"  style="width: 30%; float: left; margin-right: 10px;" /></td>
+            </div>
+    </tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<br>
+<br>
+  <a href="crop_update"> <li>Enter Crop Details</li></a>
+  <li>Update Crop Details</li>
+<a href="display"><li>View Order Details</li></a>
+  <li>Update Personal Information</li>
+</ul>
+</body>
+</html>

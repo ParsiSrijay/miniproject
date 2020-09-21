@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <title>Sign up</title>
+    
+    </head>
+    <body style="background-color: lightcyan ">
+       <div>
+        </div>
+        <div style="border-style: solid; margin-left:38%; margin-right: 38%;margin-bottom: 10%; padding-bottom: 7%">
+           <center><h3> {{content}}</h3></center>
+    <form method="POST" action="">
+        {% csrf_token %}
+    <center> <h1>Buyer's Registration Form</h1></center>  
+        <table>
+            <tr>
+         <td><center><label for="First name"><b>First name:</b></label></center></td>
+        <td><br><center><input type="text" placeholder="Enter first name" name="name"><br><br></center></td>
+         </tr>
+         <tr>
+         <td><center><label for="Aadhar Card Number"><b>Aadhar Number</b></label></center></td>
+        <td><br><center><input type="text" placeholder="Enter Aadhar Card Number" name="ano"><br><br></center></td>
+         </tr>
+         <tr>
+         <td><center><label for="Buyer Specification"><b>Buyer's Specification</b></label></center></td>
+        <td><br><center><select id='select1' name='drop'>
+                        <option>--select--</option>
+                        <option value="Trader" name="trader">Trader</option>
+                        <option value="Commission Agent" name="cagent">Commission Agent</option>
+                        <option value="Cooperative" name="coop">Cooperative</option>
+                        <option value="Exporter" name="exp">Exporter</option>
+                        <option value="Retailer" name="retailer">Retailer</option>
+                        <option value="Aggregator" name="aggregator">Aggregator</option>
+                        <option value="Others" name="others">Others</option>
+        </select>
+        <br><br></center></td>
+         </tr>
+         <tr>
+          <td><center><label for="username"><b>Username:</b></label></center></td>
+        <td><center><br><input type="text" placeholder="Enter username" name="user"><br><br></center></td>
+    </tr>
+    <tr>
+        
+    <td><center><label for="password"><b>Password:</b></label></center></td>
+        <td><center><br><input type="password" placeholder="Enter password" name="pass"><br><br></center></td>
+        </tr>
+          <tr>
+          <td><center><label for="confirm password"><b>Confirm Password:</b></label></center></td>
+        <td><center><br><input type="password" placeholder="Enter password again" name="pass1"><br><br></center></td>
+    </tr>
+    <tr>
+        <td> <center><label for="mobile number"><b>Phone number:</b></label></center></td>
+        <td><center><input type="text" maxlength="10" placeholder="Enter Phone number" name="phno">
+             <br></center></td>
+         </tr>
+         <tr>
+         <td><center><label for="emailid"><b>State:</b></label></center></td>
+             <td><center><br><input type="text" placeholder="Enter State" name="state"><br><br></center></td>
+        </tr>
+         <tr>
+         <td><center><label for="emailid"><b>District:</b></label></center></td>
+             <td><center><br><input type="text" placeholder="Enter District" name="district"><br><br></center></td>
+        </tr>
+         <tr>
+         <td><center><label for="emailid"><b>Location:</b></label></center></td>
+             <td><center><br><input type="text" placeholder="Enter Location" name="location"><br><br></center></td>
+        </tr>
+        <tr>
+         <td><center><label for="emailid"><b>Email Id:</b></label></center></td>
+             <td><center><br><input type="email" placeholder="Enter Email ID" name="email"><br><br></center></td>
+        </tr>
+        <tr>
+         <td><center><label for="emailid"><b>Company Name:</b></label></center></td>
+             <td><center><br><input type="text" placeholder="Enter Company Name" name="cname"><br><br></center></td>
+        </tr>
+        <tr>
+         <td><center><label for="emailid"><b>License Number:</b></label></center></td>
+             <td><center><br><input type="text" placeholder="Enter License Number" name="lno"><br><br></center></td>
+        </tr>
+        <tr>
+         <td><center><label for="emailid"><b>Company Reg:</b></label></center></td>
+             <td><center><br><input type="text" placeholder="Enter Company Reg" name="creg"><br><br></center></td>
+        </tr>
+        </table>
+    <center><input type="submit" value="Sign up" name="Sign up"> </center>
+        <br>
+    </form>
+        <form action="test1.html" method="POST">
+        <center>
+            <label>Already a member?</label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" placeholder="Sign In" value="Sign In" onclick="my_function()">
+        </center>
+    </form>
+             </div>     
+        <script>
+        function my_function()
+            {
+                location.replace("signin")
+            }
+        </script>
+
+    </body>
+</html>

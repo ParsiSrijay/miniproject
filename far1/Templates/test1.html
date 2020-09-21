@@ -1,0 +1,42 @@
+<html>
+    <head>
+    <title>Login page</title>
+    </head>
+    <body style="background-color: lightcyan">
+       <div>
+        <center><b style="font-size: 2.00em">Farmer's Login<br>
+           </b></center>
+        </div>
+        <br><br>
+        <br>
+        <div style="border-style: solid; margin-left:38%; margin-right: 38%;margin-bottom: 10%; padding-bottom: 7%">
+    <form method="POST" action="">
+       <center><b>{{content}}</b></center>
+        {% csrf_token %}
+    <center> <h1>Login Form</h1></center>    
+    
+    <center><label for="username"><b>Username:</b></label>
+        <input type="text" placeholder="Enter username" name="username"><br><br></center>
+        
+    <center><label for="password"><b>Password:</b></label>
+        <input type="password" placeholder="Enter password" name="pass"><br><br></center>
+    
+    <center><span><input type="checkbox" style="float: inherit">
+        <label >Remember me</label></span></center><br>
+    <center><input type="submit" placeholder="Log in" value="Log in" name="login"> </center>
+    </form>
+    <center>
+    <span>
+        <form method="post" action="">
+        <a href="test3.html">Forgot Password?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" placeholder="Sign up" value="Sign up" onclick="my_function()"></form>
+        </span></center>
+        </div>      
+        <script>
+        function my_function()
+            {
+                location.replace("signup")
+            }
+        </script>
+    </body>
+</html>

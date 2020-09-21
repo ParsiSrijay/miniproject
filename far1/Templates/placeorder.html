@@ -1,0 +1,28 @@
+<html>
+<body>
+	<h1>Place Order</h1>
+<form action="" method="POST">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<th>Buyer's Name</th>
+			<td><input type="text" name="buy"/></td>
+		</tr>
+		<tr>
+			<th>Buyer's Location</th>
+			<td><input type="text" name="loc"/></td>
+		</tr>
+		<tr>
+			<th>Quantity</th>
+			<td><input type="text" name="quantity"/></td>
+		</tr>
+		<tr>
+			<th>Crop Name:</th>
+			<th><input type="text" name="crop"></th>
+		</tr>
+		<tr>
+			<td><input type="submit"></td>
+	</table>
+</form>
+</body>
+</html>
